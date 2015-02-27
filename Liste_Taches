@@ -1,0 +1,23 @@
+Projet de Modélisation Mathématique
+Rendu à effectuer le : 25 Février 2015 à 12h00 (GMT+1)
+Groupe comprenant : AUGUSTE Bastien (CDP), BRIANT
+Arnaud, KEIL Cyril et MAMET Nicolas.
+
+11 tâches différentes
+1) Tableau de données et tableau centré réduit. (Nicolas)
+2) Matrice des corrélations. (Cyril)
+3) Valeurs propres et vecteurs propres associés. (Arnaud)
+4) Base du plan principal. (Cyril)
+5) Qualité de la représentation dans le plan principal. (Cyril)
+6) Coordonnées des deux premières composantes principales ​C​1
+et ​C​2​. (Nicolas)
+7) Représentation graphique du cercle des corrélations et des
+projections des caractères. (Arnaud) ​BUG SCILAB (SALLE
+MACHINES SUR DEBIAN)
+8) Représentation graphique de la qualité de projection des
+individus. (Bastien)
+9) Tableau donnant la qualité de projection des individus sur les
+deux premiers axes principaux. (Bastien)
+10) Tableau des contributions (sur chaque axe principal et
+globale) des individus (facultatif). (A déterminer si besoin)
+11) Le nuage de points. (Nicolas)
