@@ -93,18 +93,18 @@ function [vap, vep]=valsP(A)
     vap=diag(diagevals)
 endfunction
 
-function nuage(Coord,i,j);
+function nuagePoints(MatCoord,i,j);
     xset("font",4,3);
-    deltax=(max(Coord(:,i))-min(Coord(:,i)))/20;
-    xmin=min(Coord(:,i))-deltax;
-    xmax=max(Coord(:,i))+deltax;
-    deltay=(max(Coord(:,j))-min(Coord(:,j)))/20;
-    ymin=min(Coord(:,j))-deltay;
-    ymax=max(Coord(:,j))+deltay;
-    plot2d(Coord(:,i),Coord(:,j),-3,"031",rect=[xmin,ymin,xmax,ymax]);	
-    n = size(Coord,"r");  
-    for l=1:n,
-        xstring(Coord(l,i),Coord(l,j),string(l));
+    x = (max(MatCoord(:, i)) - min(MatCoord(:, i))) / 20;
+    xmin = min(MatCoord(:, i)) - x;
+    xmax = max(MatCoord(:, i)) + x;
+    y = (max(MatCoord(:, j)) - min(MatCoord(:, j))) / 20;
+    ymin = min(MatCoord(:, j)) - y;
+    ymax = max(MatCoord(:, j)) + y;
+    plot2d(MatCoord(:, i),MatCoord(:, j), -3, "031", rect = [xmin,ymin,xmax,ymax]);	
+    n = size(MatCoord, "r");  
+    for l = 1:n,
+        xstring(Coord(l, i), MatCoord(l, j), string(l));
     end;
 endfunction;
 
@@ -120,6 +120,5 @@ function execProjet()
     //qualite = QualiteRepresentationInd0(basePlan, ???
     [composante1, composante2] = composantePrincipale(vecteursP(:,1), vecteursP(:,2), tabCR);
     CercleCorrel(tabCR);
-    disp(composante1);
-    disp(composante2);
+    //nuagePoints(?,?,?)
 endfunction
