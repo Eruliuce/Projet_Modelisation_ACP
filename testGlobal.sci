@@ -93,6 +93,22 @@ function [vap, vep]=valsP(A)
     vap=diag(diagevals)
 endfunction
 
+function nuage(Coord,i,j);
+    xset("font",4,3);
+    deltax=(max(Coord(:,i))-min(Coord(:,i)))/20;
+    xmin=min(Coord(:,i))-deltax;
+    xmax=max(Coord(:,i))+deltax;
+    deltay=(max(Coord(:,j))-min(Coord(:,j)))/20;
+    ymin=min(Coord(:,j))-deltay;
+    ymax=max(Coord(:,j))+deltay;
+    plot2d(Coord(:,i),Coord(:,j),-3,"031",rect=[xmin,ymin,xmax,ymax]);	
+    n = size(Coord,"r");  
+    for l=1:n,
+        xstring(Coord(l,i),Coord(l,j),string(l));
+    end;
+endfunction;
+
+
 function execProjet()
     [fd,SST,Sheetnames,Sheetpos] = xls_open('Voitures.xls')
     [m,TextInd] = xls_read(fd,Sheetpos(1))
