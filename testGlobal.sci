@@ -120,5 +120,5 @@ function execProjet()
     //qualite = QualiteRepresentationInd0(basePlan, ???
     [composante1, composante2] = composantePrincipale(vecteursP(:,1), vecteursP(:,2), tabCR);
     CercleCorrel(tabCR);
-    //nuagePoints(?,?,?)
+    //nuagePoints(?, ?, ?);
 endfunction
